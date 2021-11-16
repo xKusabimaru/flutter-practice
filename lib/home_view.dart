@@ -34,9 +34,12 @@ class HomeView extends StatelessWidget {
               SizedBox(
                 width: 10,
               ),
-              Image.asset(
-                'assets/pic2.jpg',
-                width: 80,
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 5),
+                child: Image.asset(
+                  'assets/pic2.jpg',
+                  width: 80,
+                ),
               ),
               SizedBox(
                 width: 10,
@@ -55,7 +58,7 @@ class HomeView extends StatelessWidget {
               Image.asset(
                 "assets/pic1.jpg",
                 width: 360,
-              )
+              ),
             ],
           ),
           Row(
@@ -63,7 +66,10 @@ class HomeView extends StatelessWidget {
               SizedBox(
                 width: 10,
               ),
-              Icon(Icons.ac_unit),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 5),
+                child: Icon(Icons.ac_unit),
+              ),
               SizedBox(
                 width: 10,
               ),
@@ -86,16 +92,13 @@ class HomeView extends StatelessWidget {
               ),
               Text("liked by"),
               SizedBox(
-                width: 10,
+                width: 5,
               ),
               const Text("Khalid",
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              SizedBox(
-                width: 10,
-              ),
-              Text("and"),
-              SizedBox(
-                width: 10,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Text("and"),
               ),
               Text("20 others")
             ],

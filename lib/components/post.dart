@@ -20,7 +20,7 @@ class post extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 5),
               child: Image.asset(
                 'assets/pics/pic2.jpg',
-                width: 80,
+                width: 50,
               ),
             ),
             SizedBox(

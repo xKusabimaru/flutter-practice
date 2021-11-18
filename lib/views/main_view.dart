@@ -1,5 +1,5 @@
 import 'package:dev_gram/constents.dart';
-import 'package:dev_gram/home_view.dart';
+import 'package:dev_gram/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

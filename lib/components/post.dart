@@ -1,4 +1,5 @@
 import 'package:dev_gram/constents.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,8 +27,18 @@ class post extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Text("Kusa", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("khobar"),
+            //Text("Kusabimaru", style: TextStyle(fontWeight: FontWeight.bold)),
+            RichText(
+                text: TextSpan(
+                    style: DefaultTextStyle.of(context).style,
+                    children: const <TextSpan>[
+                  TextSpan(
+                      text: "Kusabimaru",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(
+                    text: "\nDammam - KFUPM",
+                  )
+                ])),
             Spacer(),
             SvgPicture.asset(kMore),
             // Icon(Icons.more_horiz),
@@ -77,17 +88,34 @@ class post extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Text("liked by"),
-            SizedBox(
-              width: 5,
-            ),
-            const Text("Khalid", style: TextStyle(fontWeight: FontWeight.bold)),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-              child: Text("and"),
-            ),
-            Text("20 others")
+            RichText(
+                text: TextSpan(
+                    style: DefaultTextStyle.of(context).style,
+                    children: const <TextSpan>[
+                  TextSpan(text: "liked by "),
+                  TextSpan(
+                      text: "kusa ",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: "and 20 others"),
+                ])),
+
+            // SizedBox(
+            //   width: 10,
+            // ),
+            // Text("liked by"),
+            // SizedBox(
+            //   width: 5,
+            // ),
+            // const Text("Khalid", style: TextStyle(fontWeight: FontWeight.bold)),
+            // Padding(
+            //   padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            //   child: Text("and"),
+            // ),
+            // Text("20 others")
           ],
+        ),
+        SizedBox(
+          height: 5,
         ),
       ],
     );

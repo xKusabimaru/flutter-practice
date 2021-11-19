@@ -15,6 +15,10 @@ class _SighInViewState extends State<SighInView> {
 
   String password = "";
 
+  bool _passwordVisible = false;
+
+  bool _obscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,20 +54,34 @@ class _SighInViewState extends State<SighInView> {
             height: 10,
           ),
           TextField(
+            obscureText: _obscureText,
+            enableSuggestions: false,
+            autocorrect: false,
             onChanged: (value) {
               password = value;
             },
             decoration: InputDecoration(
-              hintText: "password",
-              fillColor: Color(0xffFAFAFA),
-              filled: true,
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Color(0xffC4C4C4), width: 1)),
-              disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Color(0xffC4C4C4), width: 1)),
-            ),
+                hintText: "password",
+                fillColor: Color(0xffFAFAFA),
+                filled: true,
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Color(0xffC4C4C4), width: 1)),
+                disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Color(0xffC4C4C4), width: 1)),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _passwordVisible = !_passwordVisible;
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                  icon: Icon(
+                    _passwordVisible ? Icons.visibility : Icons.visibility_off,
+                    color: Colors.grey,
+                  ),
+                )),
           ),
           Align(
               alignment: Alignment.centerRight,

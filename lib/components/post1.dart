@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class post extends StatelessWidget {
-  const post({
+class post1 extends StatelessWidget {
+  const post1({
     Key? key,
   }) : super(key: key);
 
@@ -16,14 +16,19 @@ class post extends StatelessWidget {
           children: [
             SizedBox(
               width: 10,
+              height: 60,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 5),
+            //Padding(
+            //padding: EdgeInsets.symmetric(vertical: 5),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(25.0),
               child: Image.asset(
-                'assets/pics/pic2.jpg',
+                'assets/pics/avatar.jpg',
                 width: 50,
               ),
             ),
+
+            //),
             SizedBox(
               width: 10,
             ),
@@ -50,7 +55,7 @@ class post extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              "assets/pics/pic3.jpg",
+              "assets/pics/DS3-1.jpg",
               width: 360,
             ),
           ],

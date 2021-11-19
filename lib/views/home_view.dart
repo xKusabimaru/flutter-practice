@@ -1,6 +1,7 @@
+import 'package:dev_gram/components/post2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../components/post.dart';
+import '../components/post1.dart';
 import '../constents.dart';
 
 class HomeView extends StatelessWidget {
@@ -33,9 +34,10 @@ class HomeView extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            post(),
-            post(),
-            post(),
+            post1(),
+            post2(),
+            post1(),
+            post2(),
           ],
         )));
   }

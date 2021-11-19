@@ -24,9 +24,12 @@ class _MainViewState extends State<MainView> {
         items: [
           BottomNavigationBarItem(icon: SvgPicture.asset(kHome), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/pics/pic2.jpg',
-              width: 40,
+            icon: ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: Image.asset(
+                'assets/pics/avatar.jpg',
+                width: 40,
+              ),
             ),
             label: 'Profile',
           ),

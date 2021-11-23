@@ -1,5 +1,7 @@
 import 'package:dev_gram/components/grid_posts.dart';
 import 'package:dev_gram/constents.dart';
+import 'package:dev_gram/services/auth.dart';
+import 'package:dev_gram/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,7 +11,40 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(child: Text("Options")),
+            ListTile(
+                title: Text("sign out"),
+                onTap: () async {
+                  await AuthService.signOut();
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Wrapper(),
+                      ));
+                }),
+            ListTile(
+                title: Text("back"),
+                onTap: () {
+                  Navigator.pop(context);
+                })
+          ],
+        ),
+      ),
       appBar: AppBar(
+        leading: Builder(
+            builder: (context) => IconButton(
+                  icon: new Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                )),
         title: Text(
           "Kusabimaru",
           style: TextStyle(color: Colors.black),

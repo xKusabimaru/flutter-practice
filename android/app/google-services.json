@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093668337018",
+    "project_id": "devgram-efb95",
+    "storage_bucket": "devgram-efb95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093668337018:android:44e1cc247217ef73dc52c3",
+        "android_client_info": {
+          "package_name": "com.example.dev_gram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093668337018-hthhfod4h8bhqmdcknkvhksb65hkk153.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCptkieRUvPmQ4HXeYosqEP8abCFvANauw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093668337018-hthhfod4h8bhqmdcknkvhksb65hkk153.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
